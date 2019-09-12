@@ -176,9 +176,17 @@ levels(M1data$V3)[1]<-"blenny"
 #at this point, pplugging in M1data will show that I have changed the variables!
 
 
+#PROBLEMS
 
+1. My first problem is organizing all of my codes, I still am not sure if I did this correctly as it all seems jumbled up.
 
+2. I struggled creating the list and trying to get it to look the same way as the list online, I feel like this is not possible and I am overthinking it. I spent way to much time on that section trying to learn how to create the list with lists inside of the lists. 
 
+3.looking back at the first challenge. I still am not sure if I did this correctly as I have extracted every third one but I could not figure out how to do this with one single fuunction. I feel like there is some way to extract every 3rd variable with a single function but I could not figure it out.
+
+4. I struggled to try and figure out how to select certain columns of each matrix. I tried naming all of the rowns and columns thinking that would help but it did not.
+
+5. I had trouble with opening a project in R-studio and then getting it to push back to git-hub at first. This took me a while to figure out. I was struggling with copying the lines of code from github and then using that in R, that seemed very confusing at first but I firgured it out eventually. 
 
 
 
