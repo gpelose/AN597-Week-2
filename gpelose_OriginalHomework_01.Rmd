@@ -20,8 +20,44 @@ str_extract(v, "which")
 str_extract(v, "and")
 str_extract(v, "lay")
 
+#Creating Matrix 
+
+m <- matrix(data=1:80,nrow=8,ncol=10,byrow=FALSE)
+
+# naming rows and columns of matrix (m)
+
+rownames(m) <-c("r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8")
+colnames(m) <-c("c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10")
+
+#I just found out that I did not want to name them so starting back to creating the matrix.
+
+m <- matrix(data=1:80,nrow=8,ncol=10,byrow=FALSE)
 
 
+#selecting specific column and rows and assigning them to a variable. First I will name the 2nd 3rd and 6th column, c2, c3, and c6 
+
+c2 <- m[,2]
+c3 <- m[,3]
+c6 <- m[,6]
+
+#Now I will attempt to put all of these under the variable x
+#this did not work, I will now try and make a new matrix using the assingned names. 
+
+m[c(c2, c3, c6)]
+
+#Now I will assign them to the variable x
+
+x <- m[c(c2, c3, c6)]
+
+#now I will extract the 6th to 8th row by naming each row r6, r7 and r8, creating a new matrix with these variables, followed by assigning them to the variable x
+
+r6 <- m[6,]
+r7 <- m[7,]
+r8 <- m[8,]
+
+x <- m[c(r6, r7, r8)]
+
+I will now do the same thing for part three of 
 
 
 
