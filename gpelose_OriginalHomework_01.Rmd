@@ -1,0 +1,58 @@
+---
+title: "gpelose_OriginalHomeworkCode_01"
+author: "Greg Pelose"
+date: "9/11/2019"
+output: html_document
+---
+# Copying and Pasting RAW data into atom and also installed stringr to this R project.
+
+#Creating a vecotr of one word characters from the first line of the book Ulysses.
+
+v<-c("Stately", "plump", "buck", "Mulligan", "came", "from", "the", "stairhead,", "bearing", "a", "bowl", "of", "lather", "on", "which", "a", "mirror", "and", "a", "razor", "lay", "crossed.")
+
+#Now I want to extract every third element of this vector 
+
+str_extract(v, "buck")
+str_extract(v, "from")
+str_extract(v, "bearing")
+str_extract(v, "of")
+str_extract(v, "which")
+str_extract(v, "and")
+str_extract(v, "lay")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
