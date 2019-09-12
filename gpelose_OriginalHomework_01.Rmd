@@ -122,6 +122,7 @@ w <- "Daubentoniidae"
 list(a,b,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w)
 
 #I condensed the lists to attempt to make them in the correct order as the list online. This makes sense in my head but I am not positive that this is correct. 
+
 list(a,b,c,d)
 list(c(e,f,g))
 list(h)
@@ -146,6 +147,44 @@ MATRIX1 <-matrix(data=c(3,0,1,23,1,2,33,1,1,42,0,1,41,0,2),nrow=5,ncol=3,byrow=T
 #following this I Coerced this matrix into a data frame and named it M1data
 
 M1data <- as.data.frame(MATRIX1)
+
+#Now I am going to try and coerce the second column to be logical-valued and then try to coerce the third column to be factor-valued
+
+as.logical(M1data$V2)
+
+#above states the information from column 2 in logical form
+#then I replaced the old V2 with a new V2 that is in logical form in the data frame.
+
+V2 <-as.logical(M1data$V2)
+M1data$V2<-V2
+
+#now I am going to attempt to coerce the third column to be factor-valued. Factor 1 will be hawkfish and factor 2 will be clownfish
+
+v3 <- as.factor(M1data$V3)
+
+#above states me attempting to represent column 3 as a factor.
+
+#next I changed this column with my new factor column.  
+
+M1data$V3<-v3
+
+#following this I changed the name of the levels involved with my factor to hawkfish and blenny becasue those are two of my favorite fish that are common in the aquarium trade. 
+
+levels(M1data$V3)[2]<-"hawkfish"
+levels(M1data$V3)[1]<-"blenny"
+
+#at this point, pplugging in M1data will show that I have changed the variables!
+
+
+
+
+
+
+
+
+
+
+
 
 
 
