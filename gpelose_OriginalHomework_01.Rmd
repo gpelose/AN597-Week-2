@@ -57,7 +57,45 @@ r8 <- m[8,]
 
 x <- m[c(r6, r7, r8)]
 
-I will now do the same thing for part three of 
+#I will now do the same thing for part three of challenge 2 where I will extract the elements from row 2, column 2 to row 6, column 9 and assign them to the variable x
+
+c9 <- m[,9]
+r2 <- m[2,]
+
+#I already have row 6 and column 2 assigned. I added c9 and r2
+
+x <- m[c(r2, c2, r6, c9)]
+
+#Challenge 3 
+# I am going to Construct a 4-dimensional, 400 element array (5 x 5 x 4 x 4) named a consisting of the numbers 400 to 1 (i.e., a descending series).
+
+a <- array(data=1:400,dim=c(5,5,4,4))
+
+#Next step of the challenge: Given this matrix, what would the following return?
+
+a[1, 1, 1, 2]
+
+#this returned with a value of 101
+
+a[2, 3, 2, ]
+
+#This returned with these values 37 137 237 337
+
+a[1:5, 1:5, 3, 3]
+
+#Below is what was returned when thee values were plugged in. 
+[,1] [,2] [,3] [,4] [,5]
+[1,]  251  256  261  266  271
+[2,]  252  257  262  267  272
+[3,]  253  258  263  268  273
+[4,]  254  259  264  269  274
+[5,]  255  260  265  270  275
+
+
+
+
+
+
 
 
 
