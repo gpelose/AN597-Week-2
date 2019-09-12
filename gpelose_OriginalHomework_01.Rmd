@@ -121,13 +121,31 @@ w <- "Daubentoniidae"
 
 list(a,b,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w)
 
+#I condensed the lists to attempt to make them in the correct order as the list online. This makes sense in my head but I am not positive that this is correct. 
+list(a,b,c,d)
+list(c(e,f,g))
+list(h)
+list(c(i,j,k))
+list(l)
+list(m)
+list(n)
+list(o)
+list(c(p,q))
+list(r)
+list(c(s,t,u,v,w))
 
 
+#Challenge 5
 
+matrix(data=c(3,0,1,23,1,2,33,1,1,42,0,1,41,0,2),nrow=5,ncol=3,byrow=TRUE)
 
+#following this names my matrix
 
+MATRIX1 <-matrix(data=c(3,0,1,23,1,2,33,1,1,42,0,1,41,0,2),nrow=5,ncol=3,byrow=TRUE)
 
+#following this I Coerced this matrix into a data frame and named it M1data
 
+M1data <- as.data.frame(MATRIX1)
 
 
 
