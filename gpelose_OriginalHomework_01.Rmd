@@ -91,11 +91,35 @@ a[1:5, 1:5, 3, 3]
 [4,]  254  259  264  269  274
 [5,]  255  260  265  270  275
 
+#Challenge 4, Creating a list 
 
+a <- "Primates"
+b <- "Haplorhini"
+c <- "Anthropoidea"
+d <- "Platyrrhini"
+e <- "Cebidae"
+f <- "Atelidae"
+g <- "Pitheciidae"
+h <- "Catarrhini"
+i <- "Cercopithecidae"
+j <- "Hylobatidae"
+k <- "Hominidae"
+l <- "Tarsioidea"
+m <- "Tarsiidae"
+n <- "Strepsirhini"
+o <- "Lorisoidea"
+p <- "Lorisidae"
+q <- "Galagidae"
+r <- "Lemuroidea"
+s <- "Cheirogaleidae"
+t <- "Lepilemuridae"
+u <- "Indriidae"
+v <- "Lemuridae"
+w <- "Daubentoniidae"
 
+#This is a list of all of the names but I cannot figure out how to get them into a specific order
 
-
-
+list(a,b,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w)
 
 
 
