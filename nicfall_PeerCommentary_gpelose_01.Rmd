@@ -9,7 +9,7 @@ Copying and Pasting RAW data into atom and also installed stringr to this R proj
 
 ```{r}
 library("stringr") #NK: added a line of code to load your stringr library
-#NK: adding ```{r} in the line before your code & ``` in the line following your code makes a nice output format on your R markdown file
+#NK: adding ```{r} in the line before your code & ``` in the line following your code makes a nice output format on your R markdown file - you'll see I did this a lot in the rest of the document. Hit "knit" with the knitting needles above in R studio & you get to see what your whole document looks like when you're done
 ```
 
 Creating a vecotr of one word characters from the first line of the book Ulysses.
@@ -28,11 +28,12 @@ str_extract(v, "of")
 str_extract(v, "which")
 str_extract(v, "and")
 str_extract(v, "lay")
-#NK: I feel like there's an easier way to do this, but I struggled too so I don't want to give advice here
+#NK: this output looks a little off and I feel like there's an easier way to do this, but I struggled too so I don't want to give advice here, sorry :/. Feel free to take a look at my code solution though. 
 ```
 
 Creating Matrix 
 
+```{r}
 m <- matrix(data=1:80,nrow=8,ncol=10,byrow=FALSE)
 
 # naming rows and columns of matrix (m)
@@ -40,10 +41,9 @@ m <- matrix(data=1:80,nrow=8,ncol=10,byrow=FALSE)
 rownames(m) <-c("r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8")
 colnames(m) <-c("c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10")
 
-#I just found out that I did not want to name them so starting back to creating the matrix.
+#I just found out that I did not want to name them so starting back to creating the matrix. 
 
 m <- matrix(data=1:80,nrow=8,ncol=10,byrow=FALSE)
-
 
 #selecting specific column and rows and assigning them to a variable. First I will name the 2nd 3rd and 6th column, c2, c3, and c6 
 
@@ -76,8 +76,13 @@ r2 <- m[2,]
 #I already have row 6 and column 2 assigned. I added c9 and r2
 
 x <- m[c(r2, c2, r6, c9)]
+x
 
-#Challenge 3 
+```
+
+Challenge 3 
+
+```{r}
 # I am going to Construct a 4-dimensional, 400 element array (5 x 5 x 4 x 4) named a consisting of the numbers 400 to 1 (i.e., a descending series).
 
 a <- array(data=1:400,dim=c(5,5,4,4))
@@ -95,15 +100,19 @@ a[2, 3, 2, ]
 a[1:5, 1:5, 3, 3]
 
 #Below is what was returned when thee values were plugged in. 
-[,1] [,2] [,3] [,4] [,5]
-[1,]  251  256  261  266  271
-[2,]  252  257  262  267  272
-[3,]  253  258  263  268  273
-[4,]  254  259  264  269  274
-[5,]  255  260  265  270  275
+# [,1] [,2] [,3] [,4] [,5]
+# [1,]  251  256  261  266  271
+# [2,]  252  257  262  267  272
+# [3,]  253  258  263  268  273
+# [4,]  254  259  264  269  274
+# [5,]  255  260  265  270  275
 
-#Challenge 4, Creating a list 
+#NK: nice job, but R markdown does the output automatically if you do the ``` thing I mentioned in the beginning :)
+```
 
+Challenge 4, Creating a list 
+
+```{r}
 a <- "Primates"
 b <- "Haplorhini"
 c <- "Anthropoidea"
@@ -145,11 +154,15 @@ list(o)
 list(c(p,q))
 list(r)
 list(c(s,t,u,v,w))
+#NK: see my code! Not an easy one. 
+```
 
 
-#Challenge 5
+Challenge 5
 
+```{r}
 matrix(data=c(3,0,1,23,1,2,33,1,1,42,0,1,41,0,2),nrow=5,ncol=3,byrow=TRUE)
+#NK: you don't need this line above, since you make the matrix in the next line, but it's awesome that you showed your thought process
 
 #following this names my matrix
 
@@ -186,47 +199,22 @@ levels(M1data$V3)[1]<-"blenny"
 
 #at this point, pplugging in M1data will show that I have changed the variables!
 
+#NK: adding the output here, nice job!
+str(M1data)
+```
 
-#PROBLEMS
+# PROBLEMS
 
 1. My first problem is organizing all of my codes, I still am not sure if I did this correctly as it all seems jumbled up.
 
 2. I struggled creating the list and trying to get it to look the same way as the list online, I feel like this is not possible and I am overthinking it. I spent way to much time on that section trying to learn how to create the list with lists inside of the lists. 
 
-3.looking back at the first challenge. I still am not sure if I did this correctly as I have extracted every third one but I could not figure out how to do this with one single fuunction. I feel like there is some way to extract every 3rd variable with a single function but I could not figure it out.
+3. looking back at the first challenge. I still am not sure if I did this correctly as I have extracted every third one but I could not figure out how to do this with one single fuunction. I feel like there is some way to extract every 3rd variable with a single function but I could not figure it out.
 
 4. I struggled to try and figure out how to select certain columns of each matrix. I tried naming all of the rowns and columns thinking that would help but it did not.
 
 5. I had trouble with opening a project in R-studio and then getting it to push back to git-hub at first. This took me a while to figure out. I was struggling with copying the lines of code from github and then using that in R, that seemed very confusing at first but I firgured it out eventually. 
 
-
-
-
-
-
-
-
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r}
+#NK: in your original code, the default R markdown example text was here, I removed it :)
 ```
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
