@@ -1,0 +1,244 @@
+---
+title: "gpelose_OriginalHomeworkCode_01"
+author: "Greg Pelose"
+date: "9/11/2019"
+output: html_document
+---
+# Copying and Pasting RAW data into atom and also installed stringr to this R project.
+
+```{r}
+library("stringr")
+```
+
+#Creating a vecotr of one word characters from the first line of the book Ulysses.
+
+```{r}
+v<-c("Stately", "plump", "buck", "Mulligan", "came", "from", "the", "stairhead,", "bearing", "a", "bowl", "of", "lather", "on", "which", "a", "mirror", "and", "a", "razor", "lay", "crossed.")
+```
+
+#Now I want to extract every third element of this vector 
+
+
+```{r}
+str_extract(v, "buck")
+str_extract(v, "from")
+str_extract(v, "bearing")
+str_extract(v, "of")
+str_extract(v, "which")
+str_extract(v, "and")
+str_extract(v, "lay")
+```
+
+#Creating Matrix 
+
+```{r}
+m <- matrix(data=1:80,nrow=8,ncol=10,byrow=FALSE)
+```
+
+# naming rows and columns of matrix (m)
+
+```{r}
+rownames(m) <-c("r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8")
+colnames(m) <-c("c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10")
+```
+
+#I just found out that I did not want to name them so starting back to creating the matrix.
+
+```{r}
+m <- matrix(data=1:80,nrow=8,ncol=10,byrow=FALSE)
+```
+
+#selecting specific column and rows and assigning them to a variable. First I will name the 2nd 3rd and 6th column, c2, c3, and c6 
+
+```{r}
+c2 <- m[,2]
+c3 <- m[,3]
+c6 <- m[,6]
+```
+
+#Now I will attempt to put all of these under the variable x
+#this did not work, I will now try and make a new matrix using the assingned names. 
+
+```{r}
+m[c(c2, c3, c6)]
+```
+
+#Now I will assign them to the variable x
+
+```{r}
+x <- m[c(c2, c3, c6)]
+```
+
+#now I will extract the 6th to 8th row by naming each row r6, r7 and r8, creating a new matrix with these variables, followed by assigning them to the variable x
+
+```{r}
+r6 <- m[6,]
+r7 <- m[7,]
+r8 <- m[8,]
+```
+
+```{r}
+x <- m[c(r6, r7, r8)]
+```
+
+#I will now do the same thing for part three of challenge 2 where I will extract the elements from row 2, column 2 to row 6, column 9 and assign them to the variable x
+
+```{r}
+c9 <- m[,9]
+r2 <- m[2,]
+```
+
+#I already have row 6 and column 2 assigned. I added c9 and r2
+
+```{r}
+x <- m[c(r2, c2, r6, c9)]
+```
+
+#Challenge 3 
+# I am going to Construct a 4-dimensional, 400 element array (5 x 5 x 4 x 4) named a consisting of the numbers 400 to 1 (i.e., a descending series).
+
+```{r}
+a <- array(data=1:400,dim=c(5,5,4,4))
+```
+
+#Next step of the challenge: Given this matrix, what would the following return?
+
+```{r}
+a[1, 1, 1, 2]
+```
+
+#this returned with a value of 101
+
+```{r}
+a[2, 3, 2, ]
+```
+
+#This returned with these values 37 137 237 337
+
+```{r}
+a[1:5, 1:5, 3, 3]
+```
+
+#Below is what was returned when thee values were plugged in. 
+
+#I stated the above in my original homework because I did not know you could run code in this document. 
+
+#Challenge 4, Creating a list 
+
+```{r}
+a <- "Primates"
+b <- "Haplorhini"
+c <- "Anthropoidea"
+d <- "Platyrrhini"
+e <- "Cebidae"
+f <- "Atelidae"
+g <- "Pitheciidae"
+h <- "Catarrhini"
+i <- "Cercopithecidae"
+j <- "Hylobatidae"
+k <- "Hominidae"
+l <- "Tarsioidea"
+m <- "Tarsiidae"
+n <- "Strepsirhini"
+o <- "Lorisoidea"
+p <- "Lorisidae"
+q <- "Galagidae"
+r <- "Lemuroidea"
+s <- "Cheirogaleidae"
+t <- "Lepilemuridae"
+u <- "Indriidae"
+v <- "Lemuridae"
+w <- "Daubentoniidae"
+```
+
+#This is a list of all of the names but I cannot figure out how to get them into a specific order
+
+```{r}
+list(a,b,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w)
+```
+
+#I condensed the lists to attempt to make them in the correct order as the list online. This makes sense in my head but I am not positive that this is correct. 
+
+```{r}
+list(a,b,c,d)
+list(c(e,f,g))
+list(h)
+list(c(i,j,k))
+list(l)
+list(m)
+list(n)
+list(o)
+list(c(p,q))
+list(r)
+list(c(s,t,u,v,w))
+```
+
+#Challenge 5
+
+```{r}
+matrix(data=c(3,0,1,23,1,2,33,1,1,42,0,1,41,0,2),nrow=5,ncol=3,byrow=TRUE)
+```
+
+#following this names my matrix
+
+```{r}
+MATRIX1 <-matrix(data=c(3,0,1,23,1,2,33,1,1,42,0,1,41,0,2),nrow=5,ncol=3,byrow=TRUE)
+```
+
+#following this I Coerced this matrix into a data frame and named it M1data
+
+```{r}
+M1data <- as.data.frame(MATRIX1)
+```
+
+#Now I am going to try and coerce the second column to be logical-valued and then try to coerce the third column to be factor-valued
+
+```{r}
+as.logical(M1data$V2)
+```
+
+#above states the information from column 2 in logical form
+#then I replaced the old V2 with a new V2 that is in logical form in the data frame.
+
+```{r}
+V2 <-as.logical(M1data$V2)
+M1data$V2<-V2
+```
+
+#now I am going to attempt to coerce the third column to be factor-valued. Factor 1 will be hawkfish and factor 2 will be clownfish
+
+```{r}
+v3 <- as.factor(M1data$V3)
+```
+
+#above states me attempting to represent column 3 as a factor.
+#next I changed this column with my new factor column.  
+```{r}
+M1data$V3<-v3
+```
+
+#following this I changed the name of the levels involved with my factor to hawkfish and blenny becasue those are two of my favorite fish that are common in the aquarium trade. 
+
+```{r}
+levels(M1data$V3)[2]<-"hawkfish"
+levels(M1data$V3)[1]<-"blenny"
+```
+
+#at this point, pplugging in M1data will show that I have changed the variables!
+
+```{r}
+str(M1data)
+```
+
+#PROBLEMS
+
+1. My first problem is organizing all of my codes, I still am not sure if I did this correctly as it all seems jumbled up.
+
+2. I struggled creating the list and trying to get it to look the same way as the list online, I feel like this is not possible and I am overthinking it. I spent way to much time on that section trying to learn how to create the list with lists inside of the lists. 
+
+3.looking back at the first challenge. I still am not sure if I did this correctly as I have extracted every third one but I could not figure out how to do this with one single fuunction. I feel like there is some way to extract every 3rd variable with a single function but I could not figure it out.
+
+4. I struggled to try and figure out how to select certain columns of each matrix. I tried naming all of the rowns and columns thinking that would help but it did not.
+
+5. I had trouble with opening a project in R-studio and then getting it to push back to git-hub at first. This took me a while to figure out. I was struggling with copying the lines of code from github and then using that in R, that seemed very confusing at first but I firgured it out eventually. 
+
